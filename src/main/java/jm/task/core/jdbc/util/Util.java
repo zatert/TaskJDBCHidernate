@@ -16,7 +16,9 @@ public class Util {
     public Connection getConnection() {
         return connection;
     }
+    public Util(Connection con){
 
+    }
     public Util(){
         try{
 //            Driver driver = new com.mysql.jdbc.Driver();
