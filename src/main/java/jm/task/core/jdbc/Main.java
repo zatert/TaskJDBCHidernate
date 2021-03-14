@@ -15,16 +15,15 @@ public class Main {
         // реализуйте алгоритм здесь
         UserService userService = new UserServiceImpl();
         userService.createUsersTable();
-        //userService.dropUsersTable();
-        //User user = new User("Sidr","Petrovich",(byte)80);
+        User user = new User("Sidr","Petrovich",(byte)80);
         userService.saveUser("Sidr", "Petrovich",(byte)80);
         userService.saveUser("Bronislav", "Petkun",(byte)100);
         userService.saveUser("Zinaida", "Davydova",(byte)127);
         userService.saveUser("Leonid", "Mkrtchan",(byte)12);
 
         List<User> list = userService.getAllUsers();
-        for(User user : list) {
-            System.out.println(user);
+        for(User user1 : list) {
+            System.out.println(user1);
         }
         userService.cleanUsersTable();
         userService.dropUsersTable();
